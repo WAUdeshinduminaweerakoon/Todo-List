@@ -12,7 +12,8 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
   
 
-const dburl ="mongodb://localhost:27017/tododb"
+const dburl ="mongodb+srv://udeshidumina:Wui1234@cluster0.lpriwsy.mongodb.net/";
+mongoose.connect(dburl,{useNewUrlParser:true, useUnifiedTopology:true})
 
 app.get("/", (request, response) =>{
     response.render("index")
