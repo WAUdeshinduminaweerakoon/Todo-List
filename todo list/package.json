@@ -2,6 +2,18 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
-  }
+    "express": "^4.18.2",
+    "mongoose": "^6.0.8",
+    "nodemon": "^3.0.1"
+  },
+  "name": "todo-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "author": "udesh Indumina",
+  "license": "ISC",
+  "description": ""
 }
