@@ -7,3 +7,6 @@ const todoSchema = new Schema({
         required : true,
     }
 })
+
+const todo = mongoose.model("todo-list",todoSchema);
+module.exports = todo;
