@@ -25,7 +25,7 @@ app.get("/", (request, response) =>{
 app.post("/",(request,response)=>{
     console.log("fgyh");
     const todo = new Todo({
-       todo : "testing" 
+       todo : request.body.todoValue
     })
     todo.save()
     .then(result =>{
