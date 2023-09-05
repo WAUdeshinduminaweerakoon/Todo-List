@@ -36,6 +36,13 @@ app.post("/",(request,response)=>{
     })
 })
 
+app.delete("/:id",(request, response)=>{
+    Todo.findByIdAndDelete(request.params.id)
+    .then(request =>{
+        console.log(result)
+    })
+})
+
 app.listen(port, () =>{
     console.log("server is running on port " + port)
 })

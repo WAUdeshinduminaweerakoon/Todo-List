@@ -17,12 +17,25 @@
             <% data.forEach(todoValue =>{ %>
                 <div class="todo-container">
                     <div class="todo-value"><%=todoValue.todo %></div>
-
+                    <div>
+                        <a class="todo-delete <%= todoValue.id %> " >Delete</a>
+                    </div>
                 </div> 
             <%}) %> 
         <%}%>
 
 
     </div>  
+    <script>
+        const deleteButton = document.querySelectorAll(".todo-delete") 
+
+        deleteButton.forEach((button, i)=>{
+            button.addEventListener("click",() =>{
+                const endPoint= `/${button.classList[1]}`
+                method : "DELETE"
+            })
+        })
+
+    </script>
 </body>
 </html>
