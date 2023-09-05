@@ -17,8 +17,11 @@ const dburl ="mongodb+srv://udeshidumina:Wui1234@cluster0.lpriwsy.mongodb.net/";
 mongoose.connect(dburl,{useNewUrlParser:true, useUnifiedTopology:true})
 
 app.get("/", (request, response) =>{
-    console.log("fgyh");
-    response.render("index")
+    Todo.find()
+    .then(result => {
+        response.render("index",{data:result})
+        console.log(result)
+    })
 })
 // const post = 20;
 
