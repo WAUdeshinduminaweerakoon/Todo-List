@@ -38,7 +38,7 @@ app.post("/",(request,response)=>{
 
 app.delete("/:id",(request, response)=>{
     Todo.findByIdAndDelete(request.params.id)
-    .then(request =>{
+    .then(result =>{
         console.log(result)
     })
 })
